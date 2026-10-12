@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau de bord Excel PME : simulateur gratuit de performance</title>
+  <meta name="description" content="Évaluez gratuitement la performance de votre PME avec ce mini tableau de bord : chiffre d’affaires, marge, charges et trésorerie. Résultats instantanés, sans compte.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#102b25">
+  <!-- Remplacez l’URL canonique par l’URL publique réelle de cette page avant déploiement. -->
+  <link rel="canonical" href="https://votre-domaine.fr/outils/tableau-de-bord-excel-pme">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Tableau de bord Excel PME : simulateur gratuit">
+  <meta property="og:description" content="Calculez en quelques secondes les indicateurs clés de votre PME, gratuitement et sans compte.">
+  <style>
+    :root{--ink:#142923;--muted:#64736d;--paper:#f5f7f2;--white:#fff;--green:#176b4d;--lime:#d9f278;--line:#dfe6de;--soft:#eaf2e9;--amber:#fff2cf;--shadow:0 18px 55px rgba(22,49,38,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--green)}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:white;padding:10px;z-index:5}
+    header{padding:20px 0}.brand{font-weight:850;letter-spacing:-.04em;font-size:1.15rem}.brand span{color:var(--green)}.topline{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.11em;color:var(--green)}.dot{width:8px;height:8px;border-radius:50%;background:#7eaa30}
+    .hero{padding:55px 0 42px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}.hero h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.04;letter-spacing:-.065em;margin:16px 0 20px;max-width:740px}.hero p{font-size:1.12rem;color:var(--muted);max-width:620px}.trust{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.pill{border:1px solid var(--line);border-radius:99px;padding:7px 12px;font-size:.85rem;background:#fff}
+    .preview{background:#102b25;color:white;border-radius:24px;padding:26px;box-shadow:var(--shadow);transform:rotate(1deg)}.preview-top{display:flex;justify-content:space-between;align-items:center;color:#d5e3da;font-size:.84rem}.live{background:#24483b;border-radius:99px;padding:5px 10px;color:#d9f278}.preview h2{font-size:1.3rem;margin:20px 0 4px}.preview small{color:#b6c9bf}.preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.mini{background:#1a3a30;border:1px solid #315346;border-radius:14px;padding:14px}.mini span{display:block;font-size:.78rem;color:#bdd0c5}.mini strong{display:block;font-size:1.5rem;letter-spacing:-.04em;margin-top:4px}.mini em{font-style:normal;color:#d9f278;font-size:.8rem}
+    section{padding:38px 0}.section-head{max-width:720px;margin-bottom:24px}.section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15;letter-spacing:-.045em;margin:8px 0}.section-head p{color:var(--muted);margin:8px 0}
+    .tool-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:start}.panel{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 8px 30px rgba(22,49,38,.035)}.panel h3{margin:0 0 5px;font-size:1.15rem}.hint{margin:0 0 20px;color:var(--muted);font-size:.9rem}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field label{display:block;font-size:.88rem;font-weight:700;margin-bottom:6px}.field input,.field select{width:100%;border:1px solid #cdd8ce;border-radius:11px;padding:12px 11px;font:inherit;color:var(--ink);background:#fff;min-height:48px}.field input:focus,.field select:focus{outline:3px solid #cbe8d2;border-color:var(--green)}.suffix{font-size:.78rem;color:var(--muted);margin-top:4px}
+    .results{background:#edf4eb}.result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.status{font-size:.8rem;font-weight:800;border-radius:99px;background:#d9f278;padding:6px 10px;white-space:nowrap}.big-number{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.07em;font-weight:850;line-height:1.1;margin:12px 0 4px}.sub{color:var(--muted);font-size:.9rem}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.kpi{background:white;border:1px solid var(--line);border-radius:14px;padding:15px}.kpi .label{font-size:.82rem;color:var(--muted)}.kpi strong{display:block;font-size:1.35rem;letter-spacing:-.04em;margin-top:4px}.insight{background:white;border-radius:14px;padding:16px;margin-top:14px;border-left:4px solid var(--green)}.insight strong{display:block;margin-bottom:4px}.insight p{margin:0;color:var(--muted);font-size:.92rem}.disclaimer{font-size:.8rem;color:var(--muted);margin:16px 0 0}
+    .how-grid,.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tile{padding:22px;background:#fff;border:1px solid var(--line);border-radius:18px}.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--lime);font-weight:850}.tile h3{font-size:1.08rem;margin:13px 0 6px}.tile p{color:var(--muted);margin:0;font-size:.94rem}
+    .internal-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.internal-nav a{background:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:99px;text-decoration:none;font-size:.9rem}.faq{max-width:850px}.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px 19px;margin:10px 0}.faq summary{font-weight:750;cursor:pointer}.faq details p{color:var(--muted);margin-bottom:0}
+    .cta-band{background:var(--lime);border-radius:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta-band h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;letter-spacing:-.045em;margin:0 0 8px}.cta-band p{margin:0;max-width:650px}.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;text-decoration:none;font-weight:800;padding:14px 20px;border-radius:12px;white-space:nowrap;min-height:50px}.cta:hover{background:#245344}.cta:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #438d6a;outline-offset:3px}
+    footer{padding:35px 0 45px;color:var(--muted);font-size:.88rem}.footer-inner{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:800px){.hero{padding-top:35px}.hero-grid,.tool-shell{grid-template-columns:1fr}.preview{transform:none}.how-grid,.benefits{grid-template-columns:1fr}.cta-band{align-items:flex-start;flex-direction:column}.cta{width:100%}.hero h1{font-size:clamp(2.35rem,10vw,3.5rem)}}
+    @media(max-width:430px){.wrap{width:min(100% - 24px,1120px)}.panel{padding:18px}.fields{grid-template-columns:1fr}.kpis{gap:8px}.kpi{padding:12px}.preview{padding:19px}.hero p{font-size:1rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://votre-domaine.fr/outils/tableau-de-bord-excel-pme#outil",
+        "name": "Simulateur gratuit de tableau de bord Excel PME",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "inLanguage": "fr-FR",
+        "isAccessibleForFree": true,
+        "description": "Outil gratuit pour estimer la marge, le taux de marge et la couverture des charges d'une PME, sans compte.",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://votre-domaine.fr/outils/tableau-de-bord-excel-pme#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "À quoi sert un tableau de bord Excel pour une PME ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Il rassemble les indicateurs clés de l'entreprise, comme le chiffre d'affaires, les charges et la marge, afin de suivre l'activité et de repérer plus tôt les écarts."}
+          },
+          {
+            "@type": "Question",
+            "name": "Comment calculer rapidement la marge d'une PME ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Dans ce simulateur, la marge simplifiée correspond au chiffre d'affaires moins les charges renseignées. Le taux de marge sur chiffre d'affaires est cette marge divisée par le chiffre d'affaires, multipliée par 100."}
+          },
+          {
+            "@type": "Question",
+            "name": "Cet outil est-il gratuit et utilisable sans compte ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les calculs s'effectuent directement dans le navigateur, sans création de compte ni envoi des valeurs saisies à un serveur."}
+          },
+          {
+            "@type": "Question",
+            "name": "Ce simulateur remplace-t-il un tableau de bord Excel complet ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Non. Il fournit une première lecture simplifiée de quelques indicateurs. Un tableau de bord Excel structuré permet de suivre plusieurs périodes, objectifs et indicateurs adaptés à votre activité."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#outil">Aller directement au simulateur</a>
+  <header>
+    <div class="wrap topline">
+      <a class="brand" href="#accueil" aria-label="Accueil — Tableau de bord PME">pilotage<span>.</span>PME</a>
+      <span class="eyebrow"><span class="dot"></span> Outil gratuit · sans compte</span>
+    </div>
+  </header>
+  <main id="accueil">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Le pilotage, sans complexité</span>
+          <h1>Tableau de bord Excel PME : faites le point en 2 minutes</h1>
+          <p>Estimez la marge de votre entreprise, mesurez l’écart à votre objectif et obtenez une première lecture de vos chiffres. Un outil simple, immédiat et gratuit pour mieux piloter votre PME.</p>
+          <div class="trust"><span class="pill">✓ Résultat instantané</span><span class="pill">✓ Sans inscription</span><span class="pill">✓ Données locales</span></div>
+          <nav class="internal-nav" aria-label="Navigation dans la page">
+            <a href="#outil">Calculer mes indicateurs</a><a href="#mode-emploi">Mode d’emploi</a><a href="#indicateurs">Indicateurs utiles</a><a href="#faq">FAQ</a>
+          </nav>
+        </div>
+        <aside class="preview" aria-label="Aperçu d'un tableau de bord PME">
+          <div class="preview-top"><span>VUE D’ENSEMBLE · PME</span><span class="live">● Exemple</span></div>
+          <h2>Vos chiffres, plus lisibles.</h2><small>Les bons indicateurs pour décider avec recul.</small>
+          <div class="preview-grid">
+            <div class="mini"><span>Chiffre d’affaires</span><strong>250 k€</strong><em>Suivi mensuel</em></div>
+            <div class="mini"><span>Marge simplifiée</span><strong>62 k€</strong><em>À surveiller</em></div>
+            <div class="mini"><span>Objectif atteint</span><strong>92 %</strong><em>Écart visible</em></div>
+            <div class="mini"><span>Lecture rapide</span><strong>1 vue</strong><em>Décisions claires</em></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="outil">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">01 · Simulateur gratuit</span>
+          <h2>Calculez les indicateurs clés de votre PME</h2>
+          <p>Modifiez les valeurs : les résultats se mettent à jour immédiatement. Les montants sont exprimés en euros et concernent une même période.</p>
+        </div>
+        <div class="tool-shell">
+          <form class="panel" id="kpi-form" autocomplete="off">
+            <h3>Vos chiffres</h3><p class="hint">Saisissez vos données mensuelles ou celles d'une période cohérente.</p>
+            <div class="fields">
+              <div class="field"><label for="revenue">Chiffre d’affaires (€)</label><input id="revenue" name="revenue" type="number" min="0" step="100" value="50000" inputmode="decimal"><div class="suffix">Ventes sur la période</div></div>
+              <div class="field"><label for="costs">Charges totales (€)</label><input id="costs" name="costs" type="number" min="0" step="100" value="36000" inputmode="decimal"><div class="suffix">Charges sur la même période</div></div>
+              <div class="field"><label for="target">Objectif de CA (€)</label><input id="target" name="target" type="number" min="0" step="100" value="55000" inputmode="decimal"><div class="suffix">Votre cible de chiffre d’affaires</div></div>
+              <div class="field"><label for="previous">CA période précédente (€)</label><input id="previous" name="previous" type="number" min="0" step="100" value="47000" inputmode="decimal"><div class="suffix">Pour mesurer l’évolution</div></div>
+            </div>
+          </form>
+          <div class="panel results" aria-live="polite" aria-atomic="true">
+            <div class="result-top"><div><span class="eyebrow">Votre synthèse</span><h3 style="margin-top:6px">Marge simplifiée</h3></div><span class="status" id="status">À surveiller</span></div>
+            <div class="big-number" id="margin">14 000 €</div><div class="sub">Chiffre d’affaires moins charges renseignées</div>
+            <div class="kpis">
+              <div class="kpi"><span class="label">Taux de marge sur CA</span><strong id="rate">28,0 %</strong></div>
+              <div class="kpi"><span class="label">Objectif de CA atteint</span><strong id="goal">90,9 %</strong></div>
+              <div class="kpi"><span class="label">Évolution du CA</span><strong id="growth">+6,4 %</strong></div>
+              <div class="kpi"><span class="label">Écart à l’objectif</span><strong id="gap">−5 000 €</strong></div>
+            </div>
+            <div class="insight"><strong id="insight-title">Votre prochaine vérification</strong><p id="insight-text">Comparez votre taux de marge à votre objectif et à celui des périodes précédentes.</p></div>
+            <p class="disclaimer">Estimation indicative, non comptable : la marge calculée ici est une différence simplifiée entre CA et charges saisies. Elle ne remplace ni le résultat comptable, ni une analyse de trésorerie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mode-emploi">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">02 · Mode d’emploi</span><h2>Un premier diagnostic en trois étapes</h2><p>Pas besoin de créer un compte, de télécharger un fichier ou de communiquer vos chiffres.</p></div>
+        <div class="how-grid">
+          <article class="tile"><span class="num">1</span><h3>Renseignez vos chiffres</h3><p>Indiquez le chiffre d’affaires, les charges et les objectifs pour une même période.</p></article>
+          <article class="tile"><span class="num">2</span><h3>Lisez les résultats</h3><p>Visualisez votre marge simplifiée, le taux sur CA, l’écart à l’objectif et l’évolution.</p></article>
+          <article class="tile"><span class="num">3</span><h3>Choisissez quoi suivre</h3><p>Repérez les indicateurs qui méritent un suivi régulier dans votre tableau de bord.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="indicateurs">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">03 · Bien piloter</span><h2>Quels indicateurs intégrer à un tableau de bord Excel PME ?</h2><p>Le bon tableau de bord ne multiplie pas les chiffres : il met en avant ceux qui aident réellement à prendre une décision.</p></div>
+        <div class="benefits">
+          <article class="tile"><h3>Activité commerciale</h3><p>Chiffre d’affaires, évolution mensuelle, commandes, panier moyen et écart à l’objectif.</p></article>
+          <article class="tile"><h3>Rentabilité</h3><p>Marge, taux de marge, charges et comparaison avec une période de référence.</p></article>
+          <article class="tile"><h3>Trésorerie et opérations</h3><p>Solde de trésorerie, délais de paiement, retards clients, stocks ou charge de travail selon votre métier.</p></article>
+        </div>
+        <p style="color:var(--muted);margin-top:18px">Conseil : définissez une fréquence de mise à jour, un responsable et un seuil d’alerte pour chaque indicateur. Un tableau de bord est utile quand il déclenche une action.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap faq">
+        <div class="section-head"><span class="eyebrow">04 · Questions fréquentes</span><h2>FAQ — tableau de bord Excel PME</h2></div>
+        <details><summary>À quoi sert un tableau de bord Excel pour une PME ?</summary><p>Il rassemble les indicateurs clés de l’entreprise — chiffre d’affaires, charges, marge et autres KPI métier — pour suivre l’activité, comparer les résultats aux objectifs et repérer plus tôt les écarts.</p></details>
+        <details><summary>Comment calculer rapidement la marge d’une PME ?</summary><p>Dans ce simulateur, la marge simplifiée correspond au chiffre d’affaires moins les charges renseignées. Le taux affiché correspond à cette marge divisée par le chiffre d’affaires, puis multipliée par 100. Ce calcul n’est pas nécessairement égal à la marge comptable.</p></details>
+        <details><summary>Cet outil est-il gratuit et utilisable sans compte ?</summary><p>Oui. Les calculs se font directement dans votre navigateur. Les valeurs saisies ne sont pas envoyées à un serveur par ce code.</p></details>
+        <details><summary>Ce simulateur remplace-t-il un tableau de bord Excel complet ?</summary><p>Non. Il donne une première lecture de quelques indicateurs. Un tableau de bord Excel structuré peut organiser plusieurs périodes, suivre des objectifs et rassembler les KPI spécifiques à votre entreprise.</p></details>
+        <details><summary>À quelle fréquence mettre à jour son tableau de bord ?</summary><p>Choisissez la fréquence selon le rythme de décision : souvent chaque semaine pour le commercial ou l’exploitation, et chaque mois pour une synthèse de gestion. Gardez des périodes comparables et des définitions stables.</p></details>
+      </div>
+    </section>
+
+    <section id="solution">
+      <div class="wrap">
+        <div class="cta-band">
+          <div><h2>Envie de passer du calcul au pilotage ?</h2><p>Découvrez le tableau de bord Excel conçu pour aider les PME à organiser leurs indicateurs et suivre leurs résultats dans un seul fichier.</p></div>
+          <!-- CTA unique vers le produit : remplacez l’URL ci-dessous par l’URL exacte de votre fiche produit. -->
+          <a class="cta" href="https://votre-site.fr/tableau-de-bord-excel-pme" target="_blank" rel="noopener">Découvrir le tableau de bord Excel PME <span aria-hidden="true"> ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> · Ressource gratuite de pilotage PME</span><span>Outil indicatif — adaptez vos KPI à votre activité.</span></div></footer>
+  <script>
+    (() => {
+      const form = document.getElementById('kpi-form');
+      const $ = id => document.getElementById(id);
+      const money = value => new Intl.NumberFormat('fr-FR', {style:'currency',currency:'EUR',maximumFractionDigits:0}).format(value);
+      const percent = value => new Intl.NumberFormat('fr-FR',{maximumFractionDigits:1,minimumFractionDigits:1}).format(value) + ' %';
+      const signedPercent = value => (value > 0 ? '+' : value < 0 ? '−' : '') + percent(Math.abs(value));
+      const number = id => Math.max(0, Number($(id).value) || 0);
+      function calculate() {
+        const revenue = number('revenue'), costs = number('costs'), target = number('target'), previous = number('previous');
+        const margin = revenue - costs;
+        const rate = revenue > 0 ? margin / revenue * 100 : null;
+        const goal = target > 0 ? revenue / target * 100 : null;
+        const growth = previous > 0 ? (revenue - previous) / previous * 100 : null;
+        $('margin').textContent = money(margin);
+        $('rate').textContent = rate === null ? '—' : percent(rate);
+        $('goal').textContent = goal === null ? '—' : percent(goal);
+        $('growth').textContent = growth === null ? '—' : signedPercent(growth);
+        $('gap').textContent = target > 0 ? (target - revenue > 0 ? '−' : target - revenue < 0 ? '+' : '') + money(Math.abs(revenue - target)) : '—';
+        const status = $('status');
+        if (revenue === 0) { status.textContent = 'À compléter'; }
+        else if (margin < 0) { status.textContent = 'Marge négative'; }
+        else if (rate < 10) { status.textContent = 'Marge faible'; }
+        else if (goal !== null && goal >= 100) { status.textContent = 'Objectif atteint'; }
+        else { status.textContent = 'À surveiller'; }
+        if (revenue === 0) {
+          $('insight-title').textContent = 'Commencez par le chiffre d’affaires';
+          $('insight-text').textContent = 'Saisissez un CA supérieur à zéro pour calculer le taux de marge et l’avancement vers votre objectif.';
+        } else if (margin < 0) {
+          $('insight-title').textContent = 'Les charges dépassent le chiffre d’affaires';
+          $('insight-text').textContent = 'Vérifiez les montants et la période, puis analysez les postes de charges qui expliquent cet écart.';
+        } else if (rate < 10) {
+          $('insight-title').textContent = 'Examinez votre niveau de marge';
+          $('insight-text').textContent = 'Comparez ce taux à votre historique et à votre secteur avant de fixer un seuil d’alerte adapté.';
+        } else if (goal !== null && goal >= 100) {
+          $('insight-title').textContent = 'Votre objectif de CA est atteint';
+          $('insight-text').textContent = 'Vérifiez que la marge et la trésorerie suivent aussi la progression du chiffre d’affaires.';
+        } else {
+          $('insight-title').textContent = 'Suivez l’écart à votre objectif';
+          $('insight-text').textContent = 'Comparez régulièrement le CA réalisé à la cible et cherchez les actions qui peuvent réduire l’écart.';
+        }
+      }
+      form.addEventListener('input', calculate);
+      form.addEventListener('submit', event => event.preventDefault());
+      $('year').textContent = new Date().getFullYear();
+      calculate();
+    })();
+  </script>
+</body>
+</html>
